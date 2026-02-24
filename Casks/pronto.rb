@@ -13,10 +13,7 @@ cask "pronto" do
   app "Pronto.app"
 
   caveats <<~EOS
-    Pronto is not code-signed. To avoid macOS blocking it, install with:
-      brew install --cask --no-quarantine pronto
-
-    If already installed and macOS shows "damaged", run:
+    Pronto is not code-signed. After installing, run:
       xattr -cr /Applications/Pronto.app
   EOS
 end
