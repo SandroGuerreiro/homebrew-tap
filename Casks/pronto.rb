@@ -10,5 +10,15 @@ cask "pronto" do
   depends_on macos: ">= :monterey"
   depends_on arch: :arm64
 
-  app "pronto.app"
+  app "Pronto.app"
+
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-cr", "#{appdir}/Pronto.app"]
+  end
+
+  caveats <<~EOS
+    Pronto is not code-signed. If macOS blocks it, run:
+      xattr -cr /Applications/Pronto.app
+  EOS
 end
