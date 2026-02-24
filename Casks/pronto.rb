@@ -12,13 +12,11 @@ cask "pronto" do
 
   app "Pronto.app"
 
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-cr", "#{appdir}/Pronto.app"]
-  end
-
   caveats <<~EOS
-    Pronto is not code-signed. If macOS blocks it, run:
+    Pronto is not code-signed. To avoid macOS blocking it, install with:
+      brew install --cask --no-quarantine pronto
+
+    If already installed and macOS shows "damaged", run:
       xattr -cr /Applications/Pronto.app
   EOS
 end
