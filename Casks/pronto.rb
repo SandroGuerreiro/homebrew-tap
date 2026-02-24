@@ -1,8 +1,8 @@
 cask "pronto" do
-  version "0.1.0"
-  sha256 "b1d308ae57915b7850c4ab940fcfcbb09f25bb90e5a8129262bbd56104d0d3eb"
+  version "0.2.0"
+  sha256 "7935ed7b4f67c74e8cbff2b2a5f7130b6f34736b20e9cc9770e8f91328dd3651"
 
-  url "https://github.com/SandroGuerreiro/pronto/releases/download/v0.1.01/Pronto_#{version}_aarch64.dmg"
+  url "https://github.com/SandroGuerreiro/pronto/releases/download/v#{version}/Pronto_#{version}_aarch64.dmg"
   name "Pronto"
   desc "macOS menu bar app for monitoring GitHub PR statuses"
   homepage "https://github.com/SandroGuerreiro/pronto"
@@ -11,9 +11,4 @@ cask "pronto" do
   depends_on arch: :arm64
 
   app "Pronto.app"
-
-  caveats <<~EOS
-    Pronto is not code-signed. After installing, run:
-      xattr -cr /Applications/Pronto.app
-  EOS
 end
