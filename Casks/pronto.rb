@@ -1,14 +1,17 @@
 cask "pronto" do
-  version "0.4.2"
-  sha256 "2a501be214244d6d337d650c35efa768a7e91e6ec213198e31e3ee8b11f5b005"
+  version "0.5.0"
+  sha256 "27d73df0875b4273901ec95b389788ec9a4c44a733f6196fea286b822577b40e"
 
-  url "https://github.com/SandroGuerreiro/pronto/releases/download/v#{version}/Pronto_#{version}_aarch64.dmg"
+  url "https://github.com/sandroguerreiro/pronto/releases/download/v0.5.0/Pronto_0.5.0_aarch64.dmg"
   name "Pronto"
-  desc "macOS menu bar app for monitoring GitHub PR statuses"
-  homepage "https://github.com/SandroGuerreiro/pronto"
-
-  depends_on macos: ">= :monterey"
-  depends_on arch: :arm64
+  desc "Native macOS menu bar app for monitoring GitHub Pull Requests"
+  homepage "https://github.com/sandroguerreiro/pronto"
 
   app "Pronto.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.pronto.desktop",
+    "~/Library/Caches/com.pronto.desktop",
+    "~/Library/Preferences/com.pronto.desktop.plist",
+  ]
 end
