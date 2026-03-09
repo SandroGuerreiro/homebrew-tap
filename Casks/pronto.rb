@@ -9,8 +9,6 @@ cask "pronto" do
 
   app "Pronto.app"
 
-  quarantine false
-
   zap trash: [
     "~/Library/Application Support/com.pronto.desktop",
     "~/Library/Caches/com.pronto.desktop",
