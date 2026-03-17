@@ -1,6 +1,6 @@
 cask "pronto" do
   version "0.8.0"
-  sha256 "12a5a3e714b8c16b8dbcddd52c4cdc8a337510e4e7b45833e4c4b97d708d3856"
+  sha256 "c822797b6659a09ea30973dcf7463815d0566a9a5793fbbb9b620bd6e9b049b5"
 
   url "https://github.com/sandroguerreiro/pronto/releases/download/v0.8.0/Pronto_0.8.0_aarch64.dmg"
   name "Pronto"
