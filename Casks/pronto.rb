@@ -1,8 +1,8 @@
 cask "pronto" do
-  version "0.8.1"
-  sha256 "17a9e0f3c7e027b6df2dc76b6dc47a0d3b134914836b01e2f4d8656169956165"
+  version "0.8.2"
+  sha256 "adc30e11b51b959da40b8cb232d6b71a34ff83816290d851538b447a475c3fb1"
 
-  url "https://github.com/sandroguerreiro/pronto/releases/download/v0.8.1/Pronto_0.8.1_aarch64.dmg"
+  url "https://github.com/sandroguerreiro/pronto/releases/download/v0.8.2/Pronto_0.8.2_aarch64.dmg"
   name "Pronto"
   desc "Native macOS menu bar app for monitoring GitHub Pull Requests"
   homepage "https://github.com/sandroguerreiro/pronto"
