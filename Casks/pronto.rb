@@ -14,7 +14,8 @@ cask "pronto" do
   postflight do
     system_command "/usr/bin/xattr",
                    args: ["-d", "com.apple.quarantine", "#{appdir}/Pronto.app"],
-                   sudo: false
+                   sudo: false,
+                   must_succeed: false
   end
 
   zap trash: [
