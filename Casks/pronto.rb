@@ -1,8 +1,8 @@
 cask "pronto" do
-  version "0.9.1"
-  sha256 "cbdaf1d6ade7d1d79e477f22d190747e4f04f557f645434c14d7fa255012a28f"
+  version "0.10.0"
+  sha256 "7de61dec2a748f530596438f5442bdd8405d52afe8044cb3820724b20c47d1cb"
 
-  url "https://github.com/sandroguerreiro/pronto/releases/download/v0.9.1/Pronto_0.9.1_aarch64.dmg"
+  url "https://github.com/sandroguerreiro/pronto/releases/download/v0.10.0/Pronto_0.10.0_aarch64.dmg"
   name "Pronto"
   desc "Native macOS menu bar app for monitoring GitHub Pull Requests"
   homepage "https://github.com/sandroguerreiro/pronto"
@@ -14,8 +14,7 @@ cask "pronto" do
   postflight do
     system_command "/usr/bin/xattr",
                    args: ["-d", "com.apple.quarantine", "#{appdir}/Pronto.app"],
-                   sudo: false,
-                   must_succeed: false
+                   sudo: false
   end
 
   zap trash: [
